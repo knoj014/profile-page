@@ -27,5 +27,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-northeast-2
         run: |
-          aws s3 sync ./dist s3://seminar2024-dev --delete
+          aws s3 sync ./dist s3://seminar2024-prod --delete
           aws cloudfront create-invalidation --distribution-id EL20YMKF105NT --paths "/*"
